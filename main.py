@@ -12,8 +12,6 @@ async def on_message():
   if message.author == client.user:
     return
 
-  if message.content.startswith('$hello'):
-    await message.channel.send('ggg')
-
+  
 
 client.run(os.getenv('TOKEN'))
