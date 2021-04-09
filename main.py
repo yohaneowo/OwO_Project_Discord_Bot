@@ -1,17 +1,5 @@
-import discord
-import os
+from lib.bot import bot
 
-client = discord.Client()
+VERSION = "0.0.1"
 
-@client.event
-async def on_ready():
-  print("Logged in as {0.user}".format(client))
-
-@client.event
-async def on_message():
-  if message.author == client.user:
-    return
-
-  
-
-client.run(os.getenv('TOKEN'))
+bot.run(VERSION)
