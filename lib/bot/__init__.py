@@ -7,7 +7,7 @@ from discord.ext import commands, tasks
 from discord import Intents
 from discord.ext.commands import CommandNotFound
 
-PREFIX = ">"
+PREFIX = "]"
 OWNER_IDS =[814363262677418025]
 COGS = [path.split("/")[-1][:-3] for path in glob("lib/cogs/*.py")]
 
@@ -99,7 +99,7 @@ class Bot(BotBase):
         if not self.ready:
             self.ready = True
             self.guild = self.get_guild(650357594447413276)
-            self.stdout = self.get_channel(806692318185914418)
+            self.stdout = self.get_channel(824601502248992779)
             print("Bot is Online")
 
             await self.stdout.send("<3")
@@ -123,9 +123,6 @@ class Bot(BotBase):
         if message.content.startswith('$hello' ):
             await message.channel.send('hello')
 
-
-
-
-
+    
 
 bot = Bot()
